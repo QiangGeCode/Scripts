@@ -4,6 +4,7 @@ sudo docker run -d --name="Zoneminder" \
 --shm-size="8G" \
 -p 8443:443/tcp \
 -p 9001:9000/tcp \
+-p 8080:80/tcp \
 -e TZ="Asia/Shanghai" \
 -e PUID="99" \
 -e PGID="100" \
