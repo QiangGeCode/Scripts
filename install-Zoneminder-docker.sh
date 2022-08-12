@@ -1,4 +1,4 @@
-docker run -d --name="Zoneminder" \
+sudo docker run -d --name="Zoneminder" \
 --net="bridge" \
 --privileged="false" \
 --shm-size="8G" \
