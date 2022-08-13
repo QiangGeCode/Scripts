@@ -1,9 +1,9 @@
 #Created a bash script to restart the camera program when there are no changes in a file
 
-RESULT=`find . -mmin -2 -type f -print | wc -l`
+RESULT=`/usr/bin/find . -mmin -2 -type f -print | /usr/bin/wc -l`
 
 if [ $RESULT = "0" ]
 then
-        pm2 restart camera
-        echo `date +"%Y-%m-%d %H:%M:%S"` Camera Restarted >> /home/Shinobi/CameraRestart.log
+        /usr/local/bin/pm2 restart /home/Shinobi/camera
+        /bin/echo `/bin/date +"%Y-%m-%d %H:%M:%S"` Camera Restarted >> /home/Shinobi/RestartCamera.log
 fi
