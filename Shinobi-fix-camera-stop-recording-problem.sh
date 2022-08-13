@@ -1,7 +1,10 @@
 #Created a bash script to restart the camera program when there are no changes in a file
 
 #!/bin/bash
+
+#passing the ENV variables to cron task, otherwise pm2 won't run properly without ENV variables
 . /etc/profile
+
 RESULT=`/usr/bin/find /home/Shinobi -mmin -2 -type f -print | /usr/bin/wc -l`
 
 if [ $RESULT = "0" ]
