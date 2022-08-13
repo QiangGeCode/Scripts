@@ -1,5 +1,7 @@
 #Created a bash script to restart the camera program when there are no changes in a file
 
+#!/bin/bash
+. /etc/profile
 RESULT=`/usr/bin/find /home/Shinobi -mmin -2 -type f -print | /usr/bin/wc -l`
 
 if [ $RESULT = "0" ]
